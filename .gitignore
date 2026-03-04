@@ -1,0 +1,21 @@
+# Build output
+build/
+out/
+
+# IAR project files
+*.dep
+*.ewt
+Debug/
+Release/
+
+# IDE
+.vscode/settings.json
+*.bak
+*.tmp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Plans (generated)
+plans/

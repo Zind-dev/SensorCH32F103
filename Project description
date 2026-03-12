@@ -1,6 +1,0 @@
-1. Create Code for embedded project.
-    MCU is WCH Cortex-M.
-2. MCU should have input Pt1000 on ADC calculation. Humidity sensor calculation. It should output data with RS485 through UART, 4-20 and 0-10 outputs.
-3. MCU should be selected the least price from Cortex-M series of WCH microcontrollers to fullfill needs. PWMs Timers, ADCs, UART.
-
-First task is to fetch controllers and give me several examples with reasons why did you choose it.

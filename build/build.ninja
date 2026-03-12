@@ -52,154 +52,154 @@ build cmake_object_order_depends_target_ch32v003_firmware.elf: phony || .
 build CMakeFiles/ch32v003_firmware.elf.dir/User/ch32v00x_it.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/User/ch32v00x_it.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\User\ch32v00x_it.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\User
 
 build CMakeFiles/ch32v003_firmware.elf.dir/User/main.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/User/main.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\User\main.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\User
 
 build CMakeFiles/ch32v003_firmware.elf.dir/User/system_ch32v00x.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/User/system_ch32v00x.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\User\system_ch32v00x.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\User
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Core/core_riscv.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Core/core_riscv.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Core\core_riscv.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Core
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Debug/debug.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Debug/debug.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Debug\debug.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Debug
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_adc.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_adc.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_adc.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_dbgmcu.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_dbgmcu.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_dbgmcu.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_dma.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_dma.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_dma.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_exti.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_exti.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_exti.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_flash.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_flash.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_flash.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_gpio.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_gpio.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_gpio.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_i2c.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_i2c.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_i2c.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_iwdg.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_iwdg.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_iwdg.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_misc.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_misc.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_misc.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_opa.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_opa.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_opa.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_pwr.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_pwr.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_pwr.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_rcc.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_rcc.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_rcc.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_spi.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_spi.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_spi.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_tim.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_tim.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_tim.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_usart.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_usart.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_usart.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_wwdg.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/src/ch32v00x_wwdg.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src\ch32v00x_wwdg.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Peripheral\src
 
 build CMakeFiles/ch32v003_firmware.elf.dir/Startup/startup_ch32v00x.S.obj: ASM_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/Startup/startup_ch32v00x.S || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\Startup\startup_ch32v00x.S.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8
-  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\Startup
 

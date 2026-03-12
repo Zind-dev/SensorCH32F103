@@ -23,7 +23,7 @@ file(GLOB SDK_SOURCES
 )
 
 # Application sources
-file(GLOB APP_SOURCES "User/*.c")
+file(GLOB APP_SOURCES "User/*.c" "App/*.c")
 
 # Startup file
 set(STARTUP_SOURCE "Startup/startup_ch32v00x.S")
@@ -39,6 +39,7 @@ target_include_directories(${PROJECT_NAME}.elf PRIVATE
     Peripheral/inc
     Debug
     User
+    App
 )
 
 # Generate .hex and .bin after build

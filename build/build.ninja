@@ -49,6 +49,20 @@ cmake_ninja_workdir = C$:/Users/Zaslon/Desktop/test/testEmbedWch/build/
 
 build cmake_object_order_depends_target_ch32v003_firmware.elf: phony || .
 
+build CMakeFiles/ch32v003_firmware.elf.dir/App/Measure.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/App/Measure.c || cmake_object_order_depends_target_ch32v003_firmware.elf
+  DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\App\Measure.c.obj.d
+  FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
+  OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\App
+
+build CMakeFiles/ch32v003_firmware.elf.dir/App/PWM.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/App/PWM.c || cmake_object_order_depends_target_ch32v003_firmware.elf
+  DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\App\PWM.c.obj.d
+  FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
+  INCLUDES = -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Core -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Peripheral/inc -IC:/Users/Zaslon/Desktop/test/testEmbedWch/Debug -IC:/Users/Zaslon/Desktop/test/testEmbedWch/User -IC:/Users/Zaslon/Desktop/test/testEmbedWch/App
+  OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles\ch32v003_firmware.elf.dir\App
+
 build CMakeFiles/ch32v003_firmware.elf.dir/User/ch32v00x_it.c.obj: C_COMPILER__ch32v003_firmware.2eelf_unscanned_Debug C$:/Users/Zaslon/Desktop/test/testEmbedWch/User/ch32v00x_it.c || cmake_object_order_depends_target_ch32v003_firmware.elf
   DEP_FILE = CMakeFiles\ch32v003_firmware.elf.dir\User\ch32v00x_it.c.obj.d
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
@@ -211,7 +225,7 @@ build CMakeFiles/ch32v003_firmware.elf.dir/Startup/startup_ch32v00x.S.obj: ASM_C
 #############################################
 # Link the executable ch32v003_firmware.elf
 
-build ch32v003_firmware.elf: C_EXECUTABLE_LINKER__ch32v003_firmware.2eelf_Debug CMakeFiles/ch32v003_firmware.elf.dir/User/ch32v00x_it.c.obj CMakeFiles/ch32v003_firmware.elf.dir/User/main.c.obj CMakeFiles/ch32v003_firmware.elf.dir/User/system_ch32v00x.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Core/core_riscv.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Debug/debug.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_adc.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_dbgmcu.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_dma.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_exti.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_flash.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_gpio.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_i2c.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_iwdg.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_misc.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_opa.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_pwr.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_rcc.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_spi.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_tim.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_usart.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_wwdg.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Startup/startup_ch32v00x.S.obj
+build ch32v003_firmware.elf: C_EXECUTABLE_LINKER__ch32v003_firmware.2eelf_Debug CMakeFiles/ch32v003_firmware.elf.dir/App/Measure.c.obj CMakeFiles/ch32v003_firmware.elf.dir/App/PWM.c.obj CMakeFiles/ch32v003_firmware.elf.dir/User/ch32v00x_it.c.obj CMakeFiles/ch32v003_firmware.elf.dir/User/main.c.obj CMakeFiles/ch32v003_firmware.elf.dir/User/system_ch32v00x.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Core/core_riscv.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Debug/debug.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_adc.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_dbgmcu.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_dma.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_exti.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_flash.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_gpio.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_i2c.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_iwdg.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_misc.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_opa.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_pwr.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_rcc.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_spi.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_tim.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_usart.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Peripheral/src/ch32v00x_wwdg.c.obj CMakeFiles/ch32v003_firmware.elf.dir/Startup/startup_ch32v00x.S.obj
   FLAGS = -march=rv32ec -mabi=ilp32e -msmall-data-limit=8 -Wall -fdata-sections -ffunction-sections -Os
   LINK_FLAGS = -TC:/Users/Zaslon/Desktop/test/testEmbedWch/Ld/link.ld -Wl,--gc-sections -nostartfiles --specs=nano.specs --specs=nosys.specs
   OBJECT_DIR = CMakeFiles\ch32v003_firmware.elf.dir

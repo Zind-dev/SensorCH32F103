@@ -4,6 +4,11 @@
 static uint8_t  rs485_txBuf[RS485_TX_BUF_SIZE];
 static volatile uint8_t rs485_txBusy = 0;
 
+static uint8_t  rs485_rxBuf[RS485_RX_BUF_SIZE];    /* DMA writes here */
+static uint8_t  rs485_rxFrame[RS485_RX_BUF_SIZE];   /* completed frame copy */
+static volatile uint16_t rs485_rxFrameLen = 0;
+static volatile uint8_t  rs485_rxFrameReady = 0;
+
 void RS485_Init(void)
 {
     GPIO_InitTypeDef  GPIO_InitStructure = {0};
@@ -43,6 +48,35 @@ void RS485_Init(void)
 
     /* Enable USART1 DMA TX request */
     USART_DMACmd(USART1, USART_DMAReq_Tx, ENABLE);
+
+    /* Enable USART1 DMA RX request */
+    USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
+
+    /* Configure DMA1_Channel5 for USART1 RX */
+    {
+        DMA_InitTypeDef DMA_InitStructure = {0};
+        DMA_DeInit(DMA1_Channel5);
+        DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)&USART1->DATAR;
+        DMA_InitStructure.DMA_MemoryBaseAddr = (uint32_t)rs485_rxBuf;
+        DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;
+        DMA_InitStructure.DMA_BufferSize = RS485_RX_BUF_SIZE;
+        DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
+        DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
+        DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+        DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
+        DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;
+        DMA_InitStructure.DMA_Priority = DMA_Priority_High;
+        DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
+        DMA_Init(DMA1_Channel5, &DMA_InitStructure);
+        DMA_Cmd(DMA1_Channel5, ENABLE);
+    }
+
+    /* Clear any residual USART flags before enabling IDLE interrupt */
+    (void)USART1->STATR;
+    (void)USART1->DATAR;
+
+    /* Enable USART1 IDLE interrupt for RX frame detection */
+    USART_ITConfig(USART1, USART_IT_IDLE, ENABLE);
 
     /* NVIC: DMA1_Channel4 (USART1 TX DMA) */
     NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel4_IRQn;
@@ -141,9 +175,9 @@ void RS485_DMA_TX_IRQHandler(void)
 /* Called from USART1_IRQHandler in ch32v00x_it.c */
 void RS485_USART_IRQHandler(void)
 {
+    /* TX Complete — DE pin control */
     if (USART_GetITStatus(USART1, USART_IT_TC) != RESET)
     {
-        /* Transmission physically complete — last bit shifted out */
         USART_ITConfig(USART1, USART_IT_TC, DISABLE);
         USART_ClearITPendingBit(USART1, USART_IT_TC);
 
@@ -152,4 +186,50 @@ void RS485_USART_IRQHandler(void)
 
         rs485_txBusy = 0;
     }
+
+    /* IDLE line — RX frame complete */
+    if (USART_GetITStatus(USART1, USART_IT_IDLE) != RESET)
+    {
+        /* Clear IDLE flag: read STATR then DATAR (hardware sequence) */
+        (void)USART1->STATR;
+        (void)USART1->DATAR;
+
+        /* Compute received byte count */
+        uint16_t remaining = DMA_GetCurrDataCounter(DMA1_Channel5);
+        uint16_t rxLen = RS485_RX_BUF_SIZE - remaining;
+
+        if (rxLen > 0 && !rs485_rxFrameReady)
+        {
+            /* Copy DMA buffer to frame buffer */
+            for (uint16_t i = 0; i < rxLen; i++)
+                rs485_rxFrame[i] = rs485_rxBuf[i];
+            rs485_rxFrameLen = rxLen;
+            rs485_rxFrameReady = 1;
+        }
+
+        /* Reset DMA1_Channel5 for next frame */
+        DMA_Cmd(DMA1_Channel5, DISABLE);
+        DMA_SetCurrDataCounter(DMA1_Channel5, RS485_RX_BUF_SIZE);
+        DMA_Cmd(DMA1_Channel5, ENABLE);
+    }
+}
+
+uint8_t RS485_IsFrameReady(void)
+{
+    return rs485_rxFrameReady;
+}
+
+uint16_t RS485_GetReceivedFrame(uint8_t *buf, uint16_t maxLen)
+{
+    if (!rs485_rxFrameReady || buf == NULL)
+        return 0;
+
+    uint16_t copyLen = (rs485_rxFrameLen < maxLen) ? rs485_rxFrameLen : maxLen;
+    for (uint16_t i = 0; i < copyLen; i++)
+        buf[i] = rs485_rxFrame[i];
+
+    rs485_rxFrameLen = 0;
+    rs485_rxFrameReady = 0;
+
+    return copyLen;
 }

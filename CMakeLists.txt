@@ -42,6 +42,10 @@ target_include_directories(${PROJECT_NAME}.elf PRIVATE
     App
 )
 
+target_compile_definitions(${PROJECT_NAME}.elf PRIVATE
+    SDI_PRINT=1
+)
+
 # Generate .hex and .bin after build
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -O ihex   $<TARGET_FILE:${PROJECT_NAME}.elf> ${PROJECT_NAME}.hex

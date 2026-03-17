@@ -1,3 +1,0 @@
-C:/Users/Zaslon/Desktop/test/testEmbedWch/build/CMakeFiles/ch32v003_firmware.elf.dir
-C:/Users/Zaslon/Desktop/test/testEmbedWch/build/CMakeFiles/edit_cache.dir
-C:/Users/Zaslon/Desktop/test/testEmbedWch/build/CMakeFiles/rebuild_cache.dir

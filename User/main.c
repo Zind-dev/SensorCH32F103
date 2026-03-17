@@ -11,6 +11,9 @@
  *******************************************************************************/
 
 #include "debug.h"
+#include "RS485.h"
+
+static uint8_t rxBuf[RS485_RX_BUF_SIZE];
 
 int main(void)
 {
@@ -25,8 +28,21 @@ int main(void)
     printf("SystemClk:%d\r\n",SystemCoreClock);
     printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
 
+    RS485_Init();
+    printf("RS485 initialized, 9600 8N1\r\n");
+
     while(1)
     {
-
+        if (RS485_IsFrameReady())
+        {
+            uint16_t len = RS485_GetReceivedFrame(rxBuf, sizeof(rxBuf));
+            if (len > 0)
+            {
+                /* Echo received frame back over RS485 */
+                while (RS485_Transmit(rxBuf, len) == RS485_BUSY)
+                {
+                }
+            }
+        }
     }
 }

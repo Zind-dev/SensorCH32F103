@@ -1,17 +1,6 @@
 #include "Modbus.h"
 #include "RS485.h"
 
-/* Function codes */
-#define MB_FC_READ_HOLDING   0x03
-#define MB_FC_READ_INPUT     0x04
-#define MB_FC_WRITE_SINGLE   0x06
-#define MB_FC_WRITE_MULTIPLE 0x10
-
-/* Exception codes */
-#define MB_EX_ILLEGAL_FUNC   0x01
-#define MB_EX_ILLEGAL_ADDR   0x02
-#define MB_EX_ILLEGAL_VALUE  0x03
-
 static uint8_t mb_address = 1;
 
 /* Register arrays */
@@ -52,7 +41,7 @@ static void Modbus_SendException(uint8_t fc, uint8_t exCode)
 static void Modbus_SendResponse(uint16_t respLen)
 {
     uint16_t crc = Modbus_CRC16(mb_respBuf, respLen);
-    mb_respBuf[respLen]     = (uint8_t)(crc & 0xFF);
+    mb_respBuf[respLen] = (uint8_t)(crc & 0xFF);
     mb_respBuf[respLen + 1] = (uint8_t)((crc >> 8) & 0xFF);
     RS485_Transmit(mb_respBuf, respLen + 2);
 }
@@ -103,22 +92,22 @@ void Modbus_ProcessFrame(const uint8_t *frame, uint16_t len)
         if (len < 8)
             return;
 
-        int16_t  *regs;
-        uint16_t  regCount;
+        int16_t *regs;
+        uint16_t regCount;
 
         if (fc == MB_FC_READ_HOLDING)
         {
-            regs     = mb_holdingRegs;
+            regs = mb_holdingRegs;
             regCount = MB_HOLDING_REG_COUNT;
         }
         else
         {
-            regs     = mb_inputRegs;
+            regs = mb_inputRegs;
             regCount = MB_INPUT_REG_COUNT;
         }
 
         uint16_t startAddr = ((uint16_t)frame[2] << 8) | frame[3];
-        uint16_t quantity  = ((uint16_t)frame[4] << 8) | frame[5];
+        uint16_t quantity = ((uint16_t)frame[4] << 8) | frame[5];
 
         if (quantity < 1 || quantity > 125)
         {
@@ -149,7 +138,7 @@ void Modbus_ProcessFrame(const uint8_t *frame, uint16_t len)
         if (len < 8)
             return;
 
-        uint16_t regAddr  = ((uint16_t)frame[2] << 8) | frame[3];
+        uint16_t regAddr = ((uint16_t)frame[2] << 8) | frame[3];
         uint16_t regValue = ((uint16_t)frame[4] << 8) | frame[5];
 
         if (regAddr >= MB_HOLDING_REG_COUNT)
@@ -173,8 +162,8 @@ void Modbus_ProcessFrame(const uint8_t *frame, uint16_t len)
             return;
 
         uint16_t startAddr = ((uint16_t)frame[2] << 8) | frame[3];
-        uint16_t quantity  = ((uint16_t)frame[4] << 8) | frame[5];
-        uint8_t  byteCount = frame[6];
+        uint16_t quantity = ((uint16_t)frame[4] << 8) | frame[5];
+        uint8_t byteCount = frame[6];
 
         if (quantity < 1 || quantity > 123 || byteCount != quantity * 2)
         {

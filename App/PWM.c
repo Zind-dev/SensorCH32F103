@@ -1,7 +1,10 @@
 #include "PWM.h"
 
+static uint16_t pwm_period = 0;
+
 void PWM_Init(uint16_t prescaler, uint16_t period)
 {
+    pwm_period = period;
     GPIO_InitTypeDef        GPIO_InitStructure = {0};
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure = {0};
     TIM_OCInitTypeDef       TIM_OCInitStructure = {0};
@@ -45,4 +48,31 @@ void PWM_SetDuty(uint16_t channel, uint16_t duty)
         case TIM_Channel_4: TIM_SetCompare4(TIM1, duty); break;
         default: break;
     }
+}
+
+void PWM_SetFromVoltage_0_10(uint16_t channel, uint16_t voltage_mv)
+{
+    /* 0-10 V  ->  0% .. 80% of pwm_period
+     * duty = voltage_mv * (pwm_period * 80 / 100) / 10000 */
+    if (voltage_mv > 10000)
+        voltage_mv = 10000;
+
+    uint32_t duty_max = (uint32_t)pwm_period * 80 / 100;
+    uint16_t duty = (uint16_t)((uint32_t)voltage_mv * duty_max / 10000);
+    PWM_SetDuty(channel, duty);
+}
+
+void PWM_SetFromCurrent_4_20(uint16_t channel, uint16_t current_ua)
+{
+    /* 4-20 mA  ->  20% .. 80% of pwm_period
+     * duty = duty_min + (current_ua - 4000) * (duty_max - duty_min) / 16000 */
+    if (current_ua < 4000)
+        current_ua = 4000;
+    if (current_ua > 20000)
+        current_ua = 20000;
+
+    uint32_t duty_min = (uint32_t)pwm_period * 20 / 100;
+    uint32_t duty_max = (uint32_t)pwm_period * 80 / 100;
+    uint16_t duty = (uint16_t)(duty_min + (uint32_t)(current_ua - 4000) * (duty_max - duty_min) / 16000);
+    PWM_SetDuty(channel, duty);
 }

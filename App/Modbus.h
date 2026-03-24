@@ -3,6 +3,21 @@
 
 #include "ch32v00x.h"
 
+/* Modbus function codes (subset supported by this slave) */
+typedef enum {
+    MB_FC_READ_HOLDING   = 0x03,
+    MB_FC_READ_INPUT     = 0x04,
+    MB_FC_WRITE_SINGLE   = 0x06,
+    MB_FC_WRITE_MULTIPLE = 0x10
+} MB_FuncCode_t;
+
+/* Modbus exception codes */
+typedef enum {
+    MB_EX_ILLEGAL_FUNC  = 0x01,
+    MB_EX_ILLEGAL_ADDR  = 0x02,
+    MB_EX_ILLEGAL_VALUE = 0x03
+} MB_Exception_t;
+
 typedef enum {
     MB_IREG_STUB = 0,
     MB_INPUT_REG_COUNT

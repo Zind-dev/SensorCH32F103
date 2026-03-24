@@ -6,9 +6,20 @@
 #define HUMIDITY_SCALE_DEN       33     /*                 (denominator) */
 #define HUMIDITY_OFFSET          0      /* 0.1 % offset                  */
 
-#define TEMPERATURE_SCALE_NUM    1250   /* 0.1 °C per mV  (numerator)   */
-#define TEMPERATURE_SCALE_DEN    33     /*                 (denominator) */
-#define TEMPERATURE_OFFSET       (-500) /* 0.1 °C offset  (-50.0 °C)    */
+/* PT1000: ADC millivolts → resistor voltage (mV)                          *
+ *   V_r = V_adc * R_VOLT_SCALE_NUM / R_VOLT_SCALE_DEN + R_VOLT_OFFSET    *
+ * Stub: unity transform. Adjust for your front-end circuit.               */
+#define R_VOLT_SCALE_NUM        1       /* numerator   (stub: 1:1)    */
+#define R_VOLT_SCALE_DEN        1       /* denominator (stub: 1:1)    */
+#define R_VOLT_OFFSET           0       /* mV offset   (stub: 0)      */
+
+/* PT1000: Resistor voltage (mV) → temperature (0.1 °C)                    *
+ *   T_x10 = (V_r - PT1000_V0_MV) * PT1000_T_NUM / PT1000_T_DEN           *
+ * Linear approx: R=R0(1+aT), V_r=I*R, a~3.851e-3/°C                      *
+ * Stub: assumes 1 mA excitation → V0=1000 mV at 0 °C                     */
+#define PT1000_V0_MV            1000    /* voltage at 0 °C (mV)       */
+#define PT1000_T_NUM            10000   /* = 10 / a  (numerator)      */
+#define PT1000_T_DEN            3851    /* = 1 / a   (denominator)    */
 
 void Measure_Init(void)
 {
@@ -72,9 +83,17 @@ int16_t Measure_ConvertHumidity(uint16_t adc_val)
 
 int16_t Measure_ConvertTemperature(uint16_t adc_val)
 {
-    uint16_t mv = Measure_AdcToMillivolts(adc_val);
-    return (int16_t)(((int32_t)mv * TEMPERATURE_SCALE_NUM / TEMPERATURE_SCALE_DEN)
-                     + TEMPERATURE_OFFSET);
+    /* ADC value → millivolts */
+    uint16_t mv_adc = Measure_AdcToMillivolts(adc_val);
+
+    /* ADC millivolts → voltage across PT1000 (mV) */
+    int32_t mv_r = (int32_t)mv_adc * R_VOLT_SCALE_NUM / R_VOLT_SCALE_DEN
+                   + R_VOLT_OFFSET;
+
+    /* PT1000 voltage → temperature (0.1 °C) */
+    int32_t temp_x10 = (mv_r - PT1000_V0_MV) * PT1000_T_NUM / PT1000_T_DEN;
+
+    return (int16_t)temp_x10;
 }
 
 void Measure_GetResults(Measure_Result_t *result)

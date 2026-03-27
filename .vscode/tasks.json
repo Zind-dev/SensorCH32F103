@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🔨 CMake build",
+            "type": "shell",
+            "command": "cmake --build ${command:cmake.buildDirectory} --target all",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "🚀⚙️ OpenOCD flash",
+            "type": "shell",
+            "windows": {
+                "command": "${config:cortex-debug.openocdPath.windows}"
+            },
+            "args": [
+                "-f${workspaceFolder}/wch/wch-riscv.cfg",
+                "-f${workspaceFolder}/wch/wch-program.cfg"
+            ],
+            "dependsOn": "🔨 CMake build"
+        }
+    ]
+}

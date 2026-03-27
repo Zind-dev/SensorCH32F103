@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "CH32V003",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "compilerPath": "${env:CH32_TOOLCHAIN_DIR}/bin/riscv-none-embed-gcc.exe",
+            "intelliSenseMode": "gcc-arm",
+            "cStandard": "gnu99",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

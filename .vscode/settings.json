@@ -1,5 +1,21 @@
 {
-    "chat.tools.terminal.autoApprove": {
-        "cmake": true
-    }
+    "files.associations": {
+        "ch32v00x_conf.h": "c",
+        "ch32v00x_it.h": "c",
+        "core_riscv.h": "c",
+        "ch32v00x.h": "c",
+        "debug.h": "c",
+        "string.h": "c",
+        "ch32v00x_dma.h": "c",
+        "crtdefs.h": "c"
+    },
+    "cmake.useCMakePresets": "always",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.intelliSenseEngine": "default",
+    "cortex-debug.openocdPath.windows": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/OpenOCD/OpenOCD/bin/openocd.exe",
+    "cortex-debug.gdbPath.windows": "${env:CH32_TOOLCHAIN_DIR}/bin/riscv-none-embed-gdb.exe",
+    "cortex-debug.objdumpPath.windows": "${env:CH32_TOOLCHAIN_DIR}/bin/riscv-none-embed-objdump.exe",
+    "cortex-debug.registerUseNaturalFormat": false,
+    "cortex-debug.variableUseNaturalFormat": true
 }

@@ -7,15 +7,16 @@
         {
             "name": "Debug (OpenOCD)",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/firmware.elf",
+            "executable": "${command:cmake.buildDirectory}/firmware.elf",
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",
             "servertype": "openocd",
             "showDevDebugOutput": "raw",
+            "gdbVersion": 8,
             "gdbPath": "${config:cortex-debug.gdbPath.windows}",
             "objdumpPath": "${config:cortex-debug.objdumpPath.windows}",
-            "svdFile": "${workspaceFolder}/svd/CH32V003xx.svd",
+            "svdFile": "${workspaceFolder}/wch/CH32V003xx.svd",
             "configFiles": [
                 "${workspaceFolder}/wch/wch-riscv.cfg"
             ],

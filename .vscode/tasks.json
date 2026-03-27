@@ -17,6 +17,11 @@
                 "-f${workspaceFolder}/wch/wch-riscv.cfg",
                 "-f${workspaceFolder}/wch/wch-program.cfg"
             ],
+            "options": {
+                "env": {
+                    "ELF_NAME": "${command:cmake.buildDirectory}/firmware.elf"
+                }
+            },
             "dependsOn": "🔨 CMake build"
         }
     ]

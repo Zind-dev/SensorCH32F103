@@ -13,7 +13,6 @@
             "runToEntryPoint": "main",
             "servertype": "openocd",
             "showDevDebugOutput": "raw",
-            "gdbVersion": 8,
             "gdbPath": "${config:cortex-debug.gdbPath.windows}",
             "objdumpPath": "${config:cortex-debug.objdumpPath.windows}",
             "svdFile": "${workspaceFolder}/wch/CH32V003xx.svd",
